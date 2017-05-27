@@ -135,6 +135,48 @@ public class Stats {
 		
 	}
 	
+	public float calculateMedian(ArrayList<Float> data) {
+		ArrayList<Float> sortedList =  new ArrayList<Float>();
+		sortedList = sortList(data);
+		
+		float calculatedMedian = (float) 0.0;
+		if (sortedList.size() % 2 == 0) {
+			ArrayList<Float> listForMean = new ArrayList<Float>();
+			listForMean.add(sortedList.get((sortedList.size())/2));
+			listForMean.add(sortedList.get((sortedList.size()-1)/2));
+			calculatedMedian = calculateArithmeticMean(listForMean);
+		} else {
+			calculatedMedian = sortedList.get((sortedList.size()-1)/2);
+		}
+		
+		return calculatedMedian;
+	}
+	
+	public float calculateArithmeticMean(ArrayList<Float> data) {
+		float sum = 0;
+	    for (int i = 0; i < data.size(); i++) {
+	        sum += data.get(i);
+	    }
+	    return sum / data.size();
+		
+	}
+	
+	// Bubble sort to sort array
+	private ArrayList<Float> sortList(ArrayList<Float> data) {		
+		for (int i = 0; i < data.size(); i++) {
+	        for (int j = i + 1; j < data.size(); j++) {
+	            float tmp = 0;
+	            if (data.get(i) > data.get(j)) {
+	                tmp = data.get(i);
+	                data.set(i, data.get(j));
+	                data.set(j, tmp);
+	            }
+	        }
+	    }
+		return data;
+		
+	}
+	
 	
 
 }

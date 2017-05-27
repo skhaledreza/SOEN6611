@@ -1,6 +1,5 @@
 package descriptive_statistics;
 
-import java.awt.List;
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.util.ArrayList;
@@ -38,6 +37,8 @@ public class Main {
 		stats.setMinVal(stats.calculateMinVal(data));
 		stats.setMaxVal(stats.calculateMaxVal(data));
 		stats.setMode(stats.calculateMode(data));
+		stats.setMedian(stats.calculateMedian(data));
+		stats.setArithMean(stats.calculateArithmeticMean(data));
 		System.out.println(stats.toString());
 
 	}
