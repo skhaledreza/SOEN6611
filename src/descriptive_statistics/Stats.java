@@ -194,10 +194,7 @@ public class Stats {
 		
 	}
 	
-	// Formula used for square root is:
-	/*
-	 * sqrt (n+1) = 
-	 */
+	
 	private float sqrt(float number) {
 		float t;
 	 
