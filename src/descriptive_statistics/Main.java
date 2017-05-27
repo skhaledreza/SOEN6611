@@ -39,6 +39,7 @@ public class Main {
 		stats.setMode(stats.calculateMode(data));
 		stats.setMedian(stats.calculateMedian(data));
 		stats.setArithMean(stats.calculateArithmeticMean(data));
+		stats.setStandDev(stats.calculateStandardDeviation(data));
 		System.out.println(stats.toString());
 
 	}

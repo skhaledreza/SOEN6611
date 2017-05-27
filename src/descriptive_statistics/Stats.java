@@ -161,6 +161,23 @@ public class Stats {
 		
 	}
 	
+	public float calculateStandardDeviation(ArrayList<Float> data) {
+		float arithmeticMean = calculateArithmeticMean(data);
+		float sum = (float) 0.0;
+		
+		for (int i = 0; i < data.size(); i++) {
+			float tmp = data.get(i) - arithmeticMean;
+			tmp = tmp * tmp;
+	        sum += tmp;
+	    }
+		
+		float temp = sum / data.size();
+		
+		float calculatedStandardDeviation = sqrt(temp);
+		return calculatedStandardDeviation;
+		
+	}
+	
 	// Bubble sort to sort array
 	private ArrayList<Float> sortList(ArrayList<Float> data) {		
 		for (int i = 0; i < data.size(); i++) {
@@ -175,6 +192,23 @@ public class Stats {
 	    }
 		return data;
 		
+	}
+	
+	// Formula used for square root is:
+	/*
+	 * sqrt (n+1) = 
+	 */
+	private float sqrt(float number) {
+		float t;
+	 
+		float squareRoot = number / 2;
+	 
+		do {
+			t = squareRoot;
+			squareRoot = (t + (number / t)) / 2;
+		} while ((t - squareRoot) != 0);
+	 
+		return squareRoot;
 	}
 	
 	
