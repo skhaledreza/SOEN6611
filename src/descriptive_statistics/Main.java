@@ -25,7 +25,8 @@ public class Main {
 		
 		ArrayList<Float> data =  new ArrayList<Float>();
         for (int i = 0; i < quantity; i++) {
-        	float a = Math.round(r.next()*100);
+//        	float a = Math.round(r.next()*100);
+        	float a = (float) (r.next()*100);
         	data.add(a);
         	System.out.println(a);
         }
