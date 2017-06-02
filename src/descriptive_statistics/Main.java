@@ -57,7 +57,7 @@ public class Main {
 		Stats stats = new Stats();
 		stats.setMinVal(stats.calculateMinVal(data));
 		stats.setMaxVal(stats.calculateMaxVal(data));
-		//stats.setMode(stats.calculateMode(data));
+		stats.setMode(stats.calculateMode(data));
 		stats.setMedian(stats.calculateMedian(data));
 		stats.setArithMean(stats.calculateArithmeticMean(data));
 		stats.setStandDev(stats.calculateStandardDeviation(data));

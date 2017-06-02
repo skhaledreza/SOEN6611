@@ -117,10 +117,11 @@ public class Stats {
 		}
 		
 		int mode = 0;
-		for (float i = (float) 1.0; i < modeMap.size(); i++) {
-			if(mode < modeMap.get(i)) {
-				mode = modeMap.get(i);
-			}
+		
+		for (Entry<Float, Integer> entry : modeMap.entrySet()) {
+		    if(mode < entry.getValue()) {
+		    	mode = entry.getValue();
+		    }
 		}
 		
 		ArrayList<Float> calculatedMode =  new ArrayList<Float>();
